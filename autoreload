@@ -55,7 +55,7 @@ try:
         print_stdout(process)
         if max_mtime > last_mtime:
             last_mtime = max_mtime
-            print 'Restarting process.'
+            print('Restarting process.')
             kill_process_tree(process)
             process = subprocess.Popen(command, shell=True)
         time.sleep(wait)
